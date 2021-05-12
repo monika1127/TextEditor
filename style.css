@@ -2,8 +2,63 @@
     box-sizing: border-box;
   }
 
+  body {
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+:root {
+    --primary: hsl(356, 85%, 55%);
+    --primary-light: hsl(356, 25%, 77%);
+    --neutral-dark: hsl(0, 0%, 60%);
+    --neutral: hsl(0, 0%, 75%);
+    --neutral-light: hsl(0, 0%, 85%);
+  }
+
+.header {
+    color: var(--primary);
+}
+.header span{
+    color: var(--neutral-light);
+    font-weight: 300;
+}
+
+.edit_button {
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px var(--neutral);
+    cursor: pointer
+}
+
+.edit_button:hover {
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px var(--primary);
+}
+
+.edit_button img {
+    width: 70%;
+    height: 70%;
+}
+
 #output {
-    width: 500px;
+    width: 100%;
     height: 500px;
-    border: 1px solid red
+    margin-top: 8px;
+    box-shadow: 2px 2px 3px 2px var(--primary-light);
+    border: 1px solid white;
+    outline: none;
+    padding: 8px;
+    overflow: scroll;
+    border-radius: 4px
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  #output:focus {
+    border: 1px solid var(--primary-light);
   }

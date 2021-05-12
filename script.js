@@ -2,7 +2,7 @@ const output = document.getElementById('output');
 const buttons = document.querySelectorAll('.edit_button');
 
 const editText = (event)=>{
-    const editType= event.target.id
+    const editType= event.currentTarget.id
     document.execCommand(editType, false, null)
 }
 
