@@ -8,17 +8,21 @@
   <body>
     <h1 class="header">Text<span>Editor</span></h1>
     <div class="editor-options">
-      <button class="edit_button" id="bold">
-        <img src='./assets/bold.svg' alt="Bold"/>
+      <button type="button" class="edit_button" id="bold">
+        <img src="./assets/bold.svg" alt="Bold" />
       </button>
-      <button class="edit_button" id="italic">
-        <img src='./assets/italic.svg' alt="Italic"/>
+      <button type="button" class="edit_button" id="italic">
+        <img src="./assets/italic.svg" alt="Italic" />
       </button>
-      <button class="edit_button" id="insertUnorderedList">
-        <img src='./assets/list2.svg' alt="List"/>
+      <button type="button" class="edit_button" id="insertUnorderedList">
+        <img src="./assets/list2.svg" alt="List" />
       </button>
     </div>
     <div id="output" contenteditable="true"></div>
+    <div class="text_buttons">
+      <button type="button" class="text_button" id="save_btn">Save as</button>
+      <button type="button" class="text_button" id="import_btn">Import</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
