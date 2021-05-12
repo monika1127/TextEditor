@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+  }
+
+#output {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red
+  }
