@@ -1,4 +1,3 @@
-
 const output = document.getElementById("output");
 const buttons = document.querySelectorAll(".edit_button");
 
@@ -10,16 +9,24 @@ const editText = (event) => {
   document.execCommand(editType, false, null);
 };
 
-const saveText = (e) => {
-  console.log(e.target.id);
+const saveText = () => {
+  fetch("http://localhost:3000/export", {
+    method: "POST",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify({ html: output.innerHTML }),
+  });
 };
 
-const importText = (e) => {
-
+const importText = () => {
+  fetch("http://localhost:3000/import")
+    .then((response) => response.json())
+    .then((data) => {
+      output.innerHTML = data.html;
+    });
 };
 
 buttons.forEach((button) =>
   button.addEventListener("click", (e) => editText(e))
 );
-saveButton.addEventListener("click", (e) => saveText(e));
-importButton.addEventListener("click", (e) => importText(e));
+saveButton.addEventListener("click", saveText);
+importButton.addEventListener("click", importText);
