@@ -5,8 +5,7 @@
   body {
     font-family: "Public Sans", sans-serif;
     font-size: 16px;
-    max-width: 800px;
-    margin: auto;
+    margin: 8px;
   }
 
 :root {
@@ -24,14 +23,20 @@
     color: var(--neutral-light);
     font-weight: 300;
 }
-
+.editor-options {
+  display: flex;
+}
 .edit_button {
     width: 28px;
     height: 28px;
     border-radius: 2px;
     border: none;
     box-shadow: 1px 1px 1px 1px var(--neutral);
-    cursor: pointer
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
 }
 
 .edit_button:hover {
@@ -57,15 +62,17 @@
     border-radius: 4px
   }
 
-  ::-webkit-scrollbar {
+  #output::-webkit-scrollbar {
     display: none;
   }
+
   #output:focus {
     border: 1px solid var(--primary-light);
   }
 .text_buttons {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 16px;
 }
   .text_button {
     width: 100px;
@@ -84,4 +91,12 @@
     background-color: white;
     box-shadow: 1px 1px 1px 1px var(--primary);
     color: black
+}
+
+
+@media(min-width: 800px) {
+  body {
+    max-width: 800px;
+    margin: auto;
+  }
 }
